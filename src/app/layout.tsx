@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={barlow_Condensed.className}>
         <ResponsiveNav />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
