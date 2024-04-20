@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+
+    .clip_path {
+      clip-path: polygon(50% 0%, 100% 0%, 100% 84%, 50% 100%, 0 84%, 0% 60%, 0 0);
+    }
+  
+    .heading {
+        @apply text-[30px] md:text-[35px] lg:text-[45px] xl:text-[50px] uppercase font-bold text-gray-900 
+        md:leading-[4rem] leading-[3rem] text-center
+  
+    }
+  
+  }
