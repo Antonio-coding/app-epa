@@ -1,16 +1,8 @@
 export default function Register() {
   return (
     <>
-     <link rel="stylesheet" href="styles.css"></link>
+      <div>registro</div>
 
-      <div>cadastro</div>
-
-      <div>
-        <p>FitTrack</p>
-        
-         </div>
-     
-  
     </>
   );
 }
