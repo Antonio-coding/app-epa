@@ -26,7 +26,7 @@ const Feature = () => {
                 </div>
                 {/* 2st card */}
                 <div>
-                    <div className="p-6 lg:translate-y-[3rem] hover:bg-white rounded-1g transition-all duration-200">
+                    <div className="p-6 hover:bg-white rounded-1g transition-all duration-200">
                         <Image src={Img2} alt="physical" className="rounded-3xl" />
                         <h1 className="mt-[1.5rem] text-center text-[24px] text-black font-semibold">Física</h1>
                         <p className="mt-[0.2rem] text-black text-opacity-60 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente aut ad sint consequuntur, deserunt asperiores,
