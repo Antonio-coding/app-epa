@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import ResponsiveNav from "./components/Navigation/ResponsiveNav";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer";
+
 
 const barlow_Condensed = Barlow_Condensed({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -20,12 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={barlow_Condensed.className}>
         <ResponsiveNav />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

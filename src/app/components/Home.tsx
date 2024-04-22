@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 import Feature from './Features'
-import Depositions from './Depositions/Depositions'
+import Depositions from './Depositions'
 import Newsletter from './Newsletter'
 
 const Home = () => {
