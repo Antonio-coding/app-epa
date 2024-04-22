@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
 
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden bg-[#f4f1ea]">
         <Hero />
         <Feature />
         <Depositions />

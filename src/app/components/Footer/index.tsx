@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa6'
 import Image from 'next/image';
-import Logo from '../../../../public/images/logo.svg';
+import Logo from '../../../../public/images/logo_footer.svg';
 
 const Footer = () => {
   return (
@@ -14,8 +14,7 @@ const Footer = () => {
           <div>
             {/* Logo */}
             <Link href="/">
-              <Image height={500} width={500} src={Logo} alt="Logo" className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" />
-              {/* <img src="/images/logo2.svg" alt="Logo" className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" /> */}
+              <Image height={500} width={500} src={Logo} alt="Logo" className="mt-[-1rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" />
             </Link>
 
             <p className="text-white text-opacity-60 mt-[0.4rem]">
@@ -27,18 +26,18 @@ const Footer = () => {
           {/* 2nd part */}
           <div>
             <h1 className="text-[23px] font-semibold text-white">Sobre</h1>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Quem somos</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Parceiros</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Termos de uso</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Política de provacidade</p>
+            <p className="mt-[1rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Quem somos</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Parceiros</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Termos de uso</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Política de provacidade</p>
           </div>
           {/* 3rd part */}
           <div>
             <h1 className="text-[23px] font-semibold text-white">Disciplinas</h1>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Matemática</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Física</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Inglês</p>
-            <p className="mt-[0.7rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Outros</p>
+            <p className="mt-[1rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Matemática</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Física</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Inglês</p>
+            <p className="mt-[0.3rem] text-white opacity-60 hover:text-primary-blue transition-all duration-200 cursor-pointer w-fit">Outros</p>
           </div>
           {/* 4th part */}
           <div>
