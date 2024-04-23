@@ -1,75 +1,99 @@
+import React, { 'Use Client' } from 'react';
 
-     // pages/Registro.js
+function RegisterForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phoneNumber: ''
+  });
 
-import React from 'react';
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-const Registro = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Aqui você pode enviar os dados para o servidor ou realizar qualquer ação necessária
+    console.log('Dados do formulário:', formData);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">Crie sua conta</h2>
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-              Nome de usuário
-            </label>
+    <div>
+      <h2>Formulário de Registro</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>
+            Nome:
             <input
-              id="username"
-              name="username"
               type="text"
-              autoComplete="username"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              placeholder="Digite seu nome de usuário"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
+          </label>
+        </div>
+        <div>
+          <label>
+            Email:
             <input
-              id="email"
-              name="email"
               type="email"
-              autoComplete="email"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              placeholder="Digite seu email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
-          </div>
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Senha
-            </label>
+          </label>
+        </div>
+        <div>
+          <label>
+            Senha:
             <input
-              id="password"
+              type="password"
               name="password"
-              type="password"
-              autoComplete="current-password"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              placeholder="Digite sua senha"
+              value={formData.password}
+              onChange={handleChange}
+              required
             />
-          </div>
-          <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-              Confirme sua senha
-            </label>
+          </label>
+        </div>
+        <div>
+          <label>
+            Confirme a senha:
             <input
-              id="confirmPassword"
-              name="confirmPassword"
               type="password"
-              autoComplete="current-password"
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              placeholder="Digite sua senha novamente"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
             />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-          >
-            Cadastrar conta
-          </button>
-        </form>
-      </div>
+          </label>
+        </div>
+        <div>
+          <label>
+            Número de telefone:
+            <input
+              type="tel"
+              name="phoneNumber"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+            <small>Formato: xxx-xxx-xxxx</small>
+          </label>
+        </div>
+        <button type="submit">Registrar</button>
+      </form>
     </div>
   );
-};
+}
+
+export default RegisterForm;
+
+
+  
 
