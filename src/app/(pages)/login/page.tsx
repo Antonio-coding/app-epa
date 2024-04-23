@@ -1,20 +1,20 @@
 "use client";
-
+import Image from 'next/image';
 import React, { useState } from 'react';
-
+import LogoWhite from "../../../../public/images/logo_login.svg";
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-    <div className="flex flex-row rounded-2xl shadow-xl overflow-hidden w-[1000px] h-[500px]">
-      {/* Greeting Section */}
-      <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2">
-        <h2 className="text-3xl font-bold mb-30 text-center">Seja bem-vindo!</h2>
-        <img src="/images/logo_login.svg" alt="Logo" className="w-[12rem] h-[12rem] sm:w-[16rem] sm:h-[16rem] cursor-pointer" />
+      <div className="flex flex-row rounded-2xl shadow-xl overflow-hidden w-[1000px] h-[500px]">
+        {/* Greeting Section */}
+        <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2">
+          <h2 className="text-3xl font-bold mb-30 text-center">Seja bem-vindo!</h2>
+          <Image src={LogoWhite} alt="Logo" className="w-[12rem] h-[12rem] sm:w-[16rem] sm:h-[16rem] cursor-pointer" />
 
-      </div>
+        </div>
         {/* Login Section */}
         <div className="flex flex-col justify-between p-8 bg-white w-1/2">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Login</h2>
@@ -55,7 +55,7 @@ export default function Login() {
                 <input type="checkbox" name="remember" id="remember" className="h-4 w-4 text-blue-600" />
                 <label htmlFor="remember" className="ml-2 text-sm text-gray-600">Remember me</label>
               </div>
-              <a href="#" className="text-sm text-blue-600 hover:underline">Forgot Your Password?</a>
+              <a href="#" className="text-sm text-blue-600 hover:underline">Esqueceu a senha?</a>
             </div>
             <button
               type="submit"
