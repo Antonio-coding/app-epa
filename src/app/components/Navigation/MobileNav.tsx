@@ -6,7 +6,10 @@ interface Props {
   showNav: boolean;
   closeNav: () => void;
 }
-
+ 
+const Style = {
+  link: "text-[35px] font-medium hover:text-primary-blue text-white"
+}
 const MobileNav: React.FC<Props> = ({ showNav, closeNav }) => {
   const navStyle = showNav ? 'translate-x-0' : '-translate-x-full';
 
@@ -17,16 +20,16 @@ const MobileNav: React.FC<Props> = ({ showNav, closeNav }) => {
       </div>
       <div className={`bg-blue-950 flex flex-col items-center justify-center w-[70%] h-full transition-all duration-500 delay-200 ${navStyle}`}>
         <ul className="space-y-10">
-          <li className="text-[35px] font-medium hover:text-primary-blue text-white">
+          <li className={Style.link}>
             <Link href="/">Home</Link>
           </li>
-          <li className="text-[35px] font-medium hover:text-primary-blue text-white">
+          <li className={Style.link}>
             <Link href="/disciplinas">Disciplinas</Link>
           </li>
-          <li className="text-[35px] font-medium hover:text-primary-blue text-white">
+          <li className={Style.link}>
             <Link href="/sobre">Sobre</Link>
           </li>
-          <li className="text-[35px] font-medium hover:text-primary-blue text-white">
+          <li className={Style.link}>
             <Link href="/contato">Contato</Link>
           </li>
         </ul>
