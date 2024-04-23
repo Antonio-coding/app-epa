@@ -11,7 +11,7 @@ interface Props {
 
 const DepositionsCards = ({ image, reviews, title }: Props) => {
     return (
-        <div className="bg-white border  p-6 rounded-lg m-3">
+        <div className="bg-white border  p-6 rounded-lg m-3 shadow-md">
             {/* Image div */}
             <div className="w-[200px] mx-auto h-[200px]">
                 <Image
@@ -45,7 +45,7 @@ const DepositionsCards = ({ image, reviews, title }: Props) => {
                 </div>
                 <div className="text-black opacity-80">({reviews})</div>
             </div>
-            <p className="mt-[0.5rem] text-black text-opacity-70">
+            <p className="mt-[0.5rem] text-black text-opacity-70 text-sm" style={{ fontFamily: 'Helvetica, Arial, sans-serif'}}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             </p>
         </div>
