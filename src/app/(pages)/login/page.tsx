@@ -1,7 +1,7 @@
 "use client";
-
+import Image from 'next/image';
 import React, { useState } from 'react';
-
+import LogoWhite from "../../../../public/images/logo_login.svg";
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

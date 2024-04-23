@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./components/Home";
+
 import Depositions from "./components/Depositions";
 import Feature from "./components/Features";
 import Hero from "./components/Hero";
