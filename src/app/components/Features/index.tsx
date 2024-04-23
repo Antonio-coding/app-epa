@@ -19,7 +19,7 @@ const Feature = () => {
                     <div className="p-6 hover:bg-white rounded-1g transition-all duration-200">
                         <Image src={Img1} alt="math" className="rounded-3xl" />
                         <h1 className="mt-[1.5rem] text-center text-[24px] text-black font-semibold">Matemática</h1>
-                        <p className="mt-[0.2rem] text-black text-opacity-60 text-center ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente aut ad sint consequuntur, deserunt asperiores,
+                        <p className="mt-[0.2rem] text-black text-opacity-60 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente aut ad sint consequuntur, deserunt asperiores,
                             ratione amet quidem libero eum delectus ipsam enim qui quia reprehenderit necessitatibus
                             deleniti iusto error.</p>
                     </div>

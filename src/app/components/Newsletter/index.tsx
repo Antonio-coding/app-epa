@@ -7,10 +7,11 @@ const Newsletter = () => {
             <h1 className="text-[28px] sm:text-[38px] md:text-[30px] text-black font-bold">
                 Receba novidades por e-mail
             </h1>
-            <p className="mt-4 text-black text-opacity-70 w-[85%] md:w-[60%] mx-auto">
+            <p className="mt-4 text-black text-opacity-70 w-[85%] md:w-[60%] mx-auto text-[15px]" style={{ fontFamily: 'Helvetica, Arial, sans-serif'}}>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos voluptatum aliquid 
                 qui fugit, maiores aspernatur repellat impedit, consectetur accusantium sunt suscipit
                 quaerat perferendis praesentium alias deleniti repudiandae incidunt ipsa numquam.
+        
             </p>
             <div className="flex items space-x-2 mt-[3rem] justify-center">
                 {/* input */}
