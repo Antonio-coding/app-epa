@@ -8,12 +8,13 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="flex flex-row rounded-2xl shadow-xl overflow-hidden w-[1000px] h-[500px]">
-        {/* Greeting Section */}
-        <div className="bg-primary-blue text-white p-8 flex flex-col justify-center w-1/2">
-          <h2 className="text-3xl font-bold mb-2">Seja bem-vindo!</h2>
-          <img src="/images/logo.svg" alt="Logo" className="w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" />
-        </div>
+    <div className="flex flex-row rounded-2xl shadow-xl overflow-hidden w-[1000px] h-[500px]">
+      {/* Greeting Section */}
+      <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2">
+        <h2 className="text-3xl font-bold mb-30 text-center">Seja bem-vindo!</h2>
+        <img src="/images/logo_login.svg" alt="Logo" className="w-[12rem] h-[12rem] sm:w-[16rem] sm:h-[16rem] cursor-pointer" />
+
+      </div>
         {/* Login Section */}
         <div className="flex flex-col justify-between p-8 bg-white w-1/2">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Login</h2>
