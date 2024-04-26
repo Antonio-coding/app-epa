@@ -18,10 +18,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
+
         <>
             <UserNavbar />
             <section>{children}</section>
             <NavbarFooter />
         </>
+
     );
 }
