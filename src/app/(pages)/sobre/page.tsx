@@ -14,8 +14,9 @@ export default function Sobre() {
             O Ensino por Amor surgiu da necessidade de oferecer conhecimento 
             para pessoas que precisam, aulas como matemática, português entre outras, em grupo ou individual,
             online ou presencial. Nosso jeito de amar é distrubuindo conhecimento.
-            Somos a BUG HUNTERS, uma equipe do curso de Sistemas para Internet, idealizamos esse projeto a 
-            partir da necessidade querer dar aula para ensinar e passar conhecimento e não saber como fazer.
+            Somos a BUG HUNTERS, uma equipe do curso de Sistemas para Internet da Universidade Católica de Pernambuco (Unicap), idealizamos esse projeto a 
+            partir da necessidade querer dar aula para ensinar e passar conhecimento e não saber como fazer, então surgiu a ideia do site para 
+            conectar pessoas que desejam dar aula com pessoas que desejam ter aula.
             </p>
             
         </div>
