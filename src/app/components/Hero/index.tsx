@@ -56,7 +56,7 @@ const Hero = () => {
               faça  parte dessa transformação!
             </p>
             <button className="px-4 mt-[1.5rem] py-3 sm:px-6 sm:py-3 text-[20px] bg-blue-950 transition-all duration-200 hover:bg-red-700 flex items-center rounded-md space-x-2 text-white">
-              <span className="font-bold text-base">Comece agora!</span>
+              <span className="font-bold text-base" >Comece agora!</span>
             </button>
           </div>
         </div>
@@ -81,8 +81,8 @@ const Hero = () => {
               fortalecendo laços e acessibilidade educacional para todos. Junte-se a nós e
               faça  parte dessa transformação!
             </p>
-            <button className="px-4 mt-[1.5rem] py-3 sm:px-6 sm:py-3 text-[20px] bg-primary-blue transition-all duration-200 hover:bg-red-700 flex items-center rounded-md space-x-2 text-white">
-              <span className="font-bold text-base">Comece agora!</span>
+            <button className="px-4 mt-[1.5rem] py-3 sm:px-6 sm:py-3 text-[20px] bg-primary-blue duration-200 hover:bg-red-700 flex items-center rounded-md space-x-2 text-white">
+              <span className="font-bold text-base"  style={{ textShadow: '1px 0 0 rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.1), -1px 0 0 rgba(0,0,0,0.1), 0 -1px 0 rgba(0,0,0,0.1)' }}>Comece agora!</span>
             </button>
           </div>
         </div>

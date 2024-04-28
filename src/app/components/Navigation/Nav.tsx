@@ -56,7 +56,7 @@ const Nav: React.FC<Props> = ({ openNav }) => {
 
           <Link href='login'>
             <button className="px-4 py-2 sm:px-6 sm:py-3 text-[12px] bg-primary-blue transition-all duration-200 hover:bg-red-700 flex items-center rounded-md space-x-2 text-white">
-              <span className="font-bold text-base">Entrar</span>
+              <span className="font-bold text-base" style={{ textShadow: '1px 0 0 rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.1), -1px 0 0 rgba(0,0,0,0.1), 0 -1px 0 rgba(0,0,0,0.1)' }} >Entrar</span>
             </button>
           </Link>
           <Link href="register">
