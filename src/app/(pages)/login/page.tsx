@@ -8,8 +8,6 @@ export default function Login() {
 
   const handleLogin = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    // Lógica de verificação de login (por exemplo, verificar credenciais, etc.)
-    // Se o login for bem-sucedido, redirecione para o dashboard
     router.push('home');
   };
 
