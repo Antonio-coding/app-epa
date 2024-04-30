@@ -14,24 +14,24 @@ export default function Sobre() {
     },
     {
       name: "Breno",
-      image: "images/img_71.png",
+      image: "images/img.breno.jpg",
       imageAlt: "atonio-thiago-photo",
-      github: "https://github.com/Antonio-coding",
-      linkedIn: "https://github.com/Antonio-coding",
+      github: "https://github.com/in/breno-fernandes-46b05828/",
+      linkedIn: "https://github.com/breno-fernandes1",
     },
     {
       name: "Caio",
-      image: "images/img_71.png",
+      image: "images/img_101.png",
       imageAlt: "atonio-thiago-photo",
-      github: "https://github.com/Antonio-coding",
-      linkedIn: "https://github.com/Antonio-coding",
+      github: "https://github.com/caio-coding",
+      linkedIn: "https://github.com/in/ant%C3%B4nio-caio-b4694524b/",
     },
     {
       name: "Jeff",
-      image: "images/img_71.png",
+      image: "images/img_111.png",
       imageAlt: "atonio-thiago-photo",
-      github: "https://github.com/Antonio-coding",
-      linkedIn: "https://github.com/Antonio-coding",
+      github: "https://github.com/Jefferson-coding",
+      linkedIn: "https://github.com/in/ant%C3%B4nio-jefferson-b4694524b/",
     },
     {
       name: "Jorge",
@@ -42,10 +42,10 @@ export default function Sobre() {
     },
     {
       name: "Mirla",
-      image: "images/img_71.png",
+      image: "images/img_85.png",
       imageAlt: "atonio-thiago-photo",
-      github: "https://github.com/Antonio-coding",
-      linkedIn: "https://github.com/Antonio-coding",
+      github: "https://github.com/mirla-vieira",
+      linkedIn: "https://github.com/in/ant%C3%B4nio-Mirla-b4694524b/",
     },
   ];
 
@@ -112,7 +112,7 @@ export default function Sobre() {
           (Unicap), idealizamos esse projeto a partir da necessidade querer dar
           aula para ensinar e passar conhecimento e não saber como fazer, então
           surgiu a ideia do site para conectar pessoas que desejam dar aula com
-          pessoas que desejam ter aula.
+          pessoas que desejam ter aula. Nossa equipe Bug Hunters:
         </p>
       </div>
 
