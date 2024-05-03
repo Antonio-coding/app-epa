@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import LogoWhite from "../../../../public/images/logo_login.svg";
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 export default function Login() {
   const router = useRouter();
 
@@ -51,17 +52,18 @@ export default function Login() {
               placeholder="Senha"
             />
             <div className="flex justify-between">
-              <label className="flex items-center space-x-2">
-                <input type="checkbox" name="remember" id="remember" className="text-blue-600" />
-                <span className="text-sm text-gray-600">Manter-me logado</span>
-              </label>
-              <a href="#" className="text-sm text-blue-600 hover:underline">Esqueceu a senha?</a>
-            </div>
+  <label className="flex items-center space-x-2">
+    <input type="checkbox" name="remember" id="remember" className="text-blue-600" />
+    <span className="text-sm text-gray-600">Manter-me logado</span>
+  </label>
+  <Link href="/forgot-password" className="text-sm text-blue-600 hover:underline">
+    Esqueceu a senha?
+  </Link>
+</div>
             <button
               type="submit"
 
-              className="w-full py-2 px-4 bg-blue-950 text-white rounded-lg hover:bg-blue-700"
-            >
+              className="w-full py-2 px-4 bg-blue-950 text-white rounded-lg hover:bg-blue-700">
               Acessar
             </button>
           </form>
