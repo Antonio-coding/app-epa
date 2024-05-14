@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import "@/app/globals.css";
+import "@/globals.css";
 
 
-import NavbarFooter from "@/app/components/NavbarFooter";
-import UserNavbar from "@/app/components/UserNavbar";
+import NavbarFooter from "@/components/NavbarFooter";
+import UserNavbar from "@/components/UserNavbar";
 
 
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Perfil e dashborad do usuario",
 };
 
-export default function RootLayout({
+export default function AppLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
