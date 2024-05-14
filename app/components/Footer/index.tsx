@@ -14,8 +14,8 @@ const Footer = () => {
           <div>
             {/* Logo */}
             <Link href="/">
-              <Image height={500} width={500} src={ImgPath.Logo} alt="Logo" className="mt-[-1rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" />
-            </Link>
+              <Image height={500} width={500} src={ImgPath.LogoFooter} alt="Logo" className="mt-[-1rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] cursor-pointer" />
+            </Link> 
 
             <p className="text-white text-opacity-60 mt-[0.4rem]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dignissimos quis.
