@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 
 
-import NavbarFooter from "../../components/NavbarFooter";
-import UserNavbar from "../../components/UserNavbar";
+import NavbarFooter from "@/app/components/NavbarFooter";
+import UserNavbar from "@/app/components/UserNavbar";
 
 
 

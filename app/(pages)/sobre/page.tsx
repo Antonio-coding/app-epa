@@ -1,7 +1,7 @@
-import { Img } from "../../components/Img";
-import { Line } from "../../components/Line";
-import { List } from "../../components/List";
-import { Text } from "../../components/Text";
+import { Img } from "@/app/components/Img";
+import { Line } from "@/app/components/Line";
+import { List } from "@/app/components/List";
+import { Text } from "@/app/components/Text";
 
 export default function Sobre() {
   const groupInfo = [
