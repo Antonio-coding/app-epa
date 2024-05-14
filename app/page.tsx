@@ -1,11 +1,22 @@
-export default function Home() {
+import React from "react";
+
+import Depositions from "./components/Depositions";
+import Feature from "./components/Features";
+import Hero from "./components/Hero";
+import Newsletter from "./components/Newsletter";
+
+const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-5xl ">Olá Mundo!</h1>
-      <br />
-      <h2 className=" border border-gray-500 p-4 rounded-lg">
-        Aqui é começo do EPA! - Ensino por amor
-      </h2>
-    </main>
-  );
-}
+
+    <>
+      <div className="overflow-hidden bg-[#f4f1ea]">
+        <Hero />
+        <Feature />
+        <Depositions />
+        <Newsletter />
+      </div>
+    </>
+  )
+};
+
+export default HomePage;
