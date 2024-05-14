@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed } from "next/font/google";
-import "./globals.css";
+import "@/globals.css";
+import Footer from "@/components/Footer";
+import ResponsiveNav from "@/components/Navigation/ResponsiveNav";
 
 
-
-const barlow_Condensed = Barlow_Condensed({
-  weight: ["300", "400", "500", "600", "700", "800"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Epa! | Ensino por amor!",
@@ -15,19 +12,19 @@ export const metadata: Metadata = {
   icons: "/images/epa.ico",
 };
 
-export default function RootLayout({
+export default function PublicLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={barlow_Condensed.className}>
-
+    <>
+      <div>
+        <ResponsiveNav />
         {children}
-
-      </body>
-    </html>
+        <Footer />
+      </div>
+    </>
   );
 }
 

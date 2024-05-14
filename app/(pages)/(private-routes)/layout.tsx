@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Perfil e dashborad do usuario",
 };
 
-export default function AppLayout({
+export default function PrivateLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;

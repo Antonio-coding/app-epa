@@ -3,7 +3,7 @@ export default function InClass() {
     return (
         <>
             <div>this is the class there you are subscribe </div>
-            <button type="button">Click me</button>
+            <button type="button" className=" bg-primary-blue ">Click me</button>
 
             <ul>
                 {/* map through array and create list items */}
