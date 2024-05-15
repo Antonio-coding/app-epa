@@ -3,8 +3,8 @@ import { Barlow_Condensed } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Metadata } from "next";
-import path from "animejs";
-import SplashScreenPage from "./(pages)/(public-routes)/splash-screen/page";
+
+import SplashScreen from "./components/SplashScreen";
 
 const barlow_Condensed = Barlow_Condensed({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -31,12 +31,20 @@ export default function RootLayout({
   }, [isLoading]);
 
   return (
-    <div className={barlow_Condensed.className}>
-      {isLoading && isHome ? (
-        <SplashScreenPage finishLoading={() => setIsLoading(false)} />
-      ) : (
-        children
-      )}
-    </div>
+    <html lang="pt-br">
+      <head>
+
+      </head>
+      <body className={barlow_Condensed.className}>
+        {isLoading && isHome ? (
+          <SplashScreen finishLoading={() => setIsLoading(false)} />
+
+        ) : (
+          <>
+            {children}
+          </>
+        )}
+      </body>
+    </html>
   );
 }

@@ -3,11 +3,10 @@ import SplashScreen from "@/components/SplashScreen";
 export default function SplashScreenPage() {
     return (
         <>
-            <div className="flex flex-col h-screen w-screen items-center justify-center">
+            <div className="  border bg-red-500 h-screen w-screen flex flex-col items-center justify-center">
 
-                <SplashScreen finishLoading={undefined} />
-                
-            </div>
+
+            </div >
         </>
     )
 }
