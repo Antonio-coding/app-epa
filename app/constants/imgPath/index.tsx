@@ -6,7 +6,8 @@ const ImgPath = {
     Img1: "/images/f1.png",
     Img2: "/images/f2.png",
     Img3: "/images/f3.png",
-    ImgThiago: "/images/equip/img_71.png",
+    ImgCoracao: "/images/iconeCoracao.png",
+
 }
 
 export default ImgPath;

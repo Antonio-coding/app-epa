@@ -55,7 +55,7 @@ const SplashScreen = ({ finishLoading }: SplashScreenProps) => {
     return (
         <>
             <div className="flex flex-col w-screen h-screen  items-center justify-center bg-slate-500 " isMounted={isMounted}  >
-                <Image src={ImgPath.ImgThiago} alt="Logo" width={60} height={60} />
+                <Image src={ImgPath.ImgCoracao} alt="Logo" width={60} height={60} />
             </div>
         </>
 
