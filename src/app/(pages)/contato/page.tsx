@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import LogoWhite from "../../../../public/images/logo_login.svg";
+
 export default function Contato() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -56,7 +57,7 @@ export default function Contato() {
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
               placeholder="Mensagem"
-              rows="4"
+              rows={4} {/* Corrigindo o sinal de igual mal colocado */}
             ></textarea>
             <button
               type="submit"
