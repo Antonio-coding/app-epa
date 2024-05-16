@@ -17,10 +17,10 @@ const HomePrivate: React.FC = () => {
       {/* Main */}
       <div className="flex-1 p-8">
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-4 shadow-md rounded-lg">Card 1</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Card 2</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Card 3</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Card 4</div>
+          <div className="bg-white p-4 shadow-md rounded-lg">Aulas</div>
+          <div className="bg-white p-4 shadow-md rounded-lg">Sala de aula</div>
+          <div className="bg-white p-4 shadow-md rounded-lg">Cursos</div>
+          <div className="bg-white p-4 shadow-md rounded-lg">Tira-dúvidas</div>
         </div>
       </div>
     </div>
