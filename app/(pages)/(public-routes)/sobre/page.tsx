@@ -1,7 +1,5 @@
-import { AuthorCard } from "@/components/AuthorCard";
-import ImgPath from "@/constants/imgPath";
 import React from "react";
-
+import { AuthorCard } from "@/components/AuthorCard";
 // Define uma interface para os autores
 interface Author {
   name: string;
@@ -13,7 +11,6 @@ interface Author {
 const authors: Author[] = [
   {
     name: "Caio Roberto",
-
     img: "/images/imgCaio.png",
     linkedin: "https://www.linkedin.com/in/caio-roberto-187983256/",
   },
@@ -43,22 +40,25 @@ const authors: Author[] = [
 const AuthorsPage: React.FC = () => {
   return (
     <>
-      <div className="w-[100%] h-[20rem] flex items-center justify-center flex-col bg-primary-blue md:clip_path">
-        <div className=" absolute flex flex-col items-center">
-          
-          <h1>  
-            <img  src="/images/logo_login.svg" alt=""></img>
-          className="text-3xl font-bold " O Ensino por Amor</h1>
-          <h2 className="text-xl font-semibold">
-            Surgiu da necessidade de oferecer conhecimento para pessoas que
-            precisam , aulas como matemática, português, entre outras, em grupo
-            ou individual, online.
-          </h2>
+      <div className="w-full h-[10rem] flex items-center justify-center bg-primary-blue md:clip_path relative">
+        <div className="absolute top-0 mt-0 flex flex-col items-center">
+          <img
+            className="h-32 w-32 object-contain mb-2"
+            src="/images/logo_login.svg"
+            alt="Logo"
+          />
         </div>
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gray-200"></div>
       </div>
+      <h2 className="absolute justify-center text-xl font-semibold text-center text-black  m-10">
+        O EPA surge da necessidade de oferecer conhecimento para pessoas que
+        precisam. Aulas como matemática, português etc, em grupo ou
+        individual, online. <p>Esta é a equipe que trabalha por trás do projeto, Os Bug Hunters!</p>
+      </h2>
 
-      <div className="my-20 mx-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div>
+    
+      </div>
+      <div className="my-56 mx-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {authors.map((item, index) => (
           <AuthorCard
             key={index}

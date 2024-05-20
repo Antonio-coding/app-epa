@@ -12,3 +12,11 @@
         md:leading-[4rem] leading-[3rem] text-center;
   }
 }
+
+.text-outline-black {
+  text-shadow: 
+    -1px -1px 0 #808080,  
+    1px -1px 0 #808080,
+    -1px 1px 0 #808080,
+    1px 1px 0 #808080;
+}
