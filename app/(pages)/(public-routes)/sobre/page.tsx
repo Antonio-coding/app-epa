@@ -49,16 +49,19 @@ const AuthorsPage: React.FC = () => {
           />
         </div>
       </div>
-      <h2 className="absolute justify-center text-xl font-semibold text-center text-black  m-10">
-        O EPA surge da necessidade de oferecer conhecimento para pessoas que
-        precisam. Aulas como matemática, português etc, em grupo ou
-        individual, online. <p>Esta é a equipe que trabalha por trás do projeto, Os Bug Hunters!</p>
-      </h2>
-
-      <div>
-    
+      <div> 
+ 
+        <h2 className=" justify-center text-2xl font-semibold text-center text-black  m-10">
+          O EPA surge da necessidade de oferecer conhecimento para pessoas que
+          precisam. Aulas como matemática, português etc, em grupo ou
+          individual, online.{" "}
+          <p>
+            Esta é a equipe que trabalha por trás do projeto, Os Bug Hunters!
+          </p>
+        </h2>{" "}
       </div>
-      <div className="my-56 mx-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+
+      <div className="my-40 mx-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {authors.map((item, index) => (
           <AuthorCard
             key={index}

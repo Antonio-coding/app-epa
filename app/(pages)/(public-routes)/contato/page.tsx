@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import LogoWhite from "../../../../public/images/logo_login.svg";
 
 export default function Contato() {
-  const [nome, setNome] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensagem, setMensagem] = useState('');
+  const [nome, setNome] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [mensagem, setMensagem] = useState<string>('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     // Aqui você pode adicionar a lógica para lidar com o envio do formulário, como enviar os dados para o backend
     console.log('Nome:', nome);
@@ -57,7 +57,7 @@ export default function Contato() {
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
               placeholder="Mensagem"
-              rows={4} {/* Corrigindo o sinal de igual mal colocado */}
+              rows={4}
             ></textarea>
             <button
               type="submit"
