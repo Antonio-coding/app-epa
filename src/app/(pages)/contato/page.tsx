@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from 'react';
-import LogoWhite from "../../../../public/images/logo_login.svg";
+import { useState } from 'react';
+import Image from 'next/image'; // Importar Image do Next.js
+
+// Importar a imagem usando require() para garantir que o webpack a inclua na build
+const LogoWhite = require('../../../../public/images/logo_login.svg');
+
 export default function Contato() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [mensagem, setMensagem] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { // Remover any e definir o tipo do evento
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para lidar com o envio do formulário, como enviar os dados para o backend
-    console.log('Nome:', nome);
-    console.log('Email:', email);
-    console.log('Mensagem:', mensagem);
   };
 
   return (
@@ -21,8 +21,8 @@ export default function Contato() {
         {/* Greeting Section */}
         <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2 space-y-4">
           <h2 className="text-3xl font-bold text-center">Entre em Contato</h2>
-          {/* Imagem do logo - substitua pelo seu próprio componente ou imagem */}
-          <img src="/images/logo_login.svg" alt="Logo" className="w-48 h-48" />
+          {/* Imagem do logo - usando a tag <Image> do Next.js */}
+          <Image src={LogoWhite} alt="Logo" width={48} height={48} />
         </div>
         
         {/* Contato Section */}
@@ -56,7 +56,6 @@ export default function Contato() {
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
               placeholder="Mensagem"
-              rows="4"
             ></textarea>
             <button
               type="submit"

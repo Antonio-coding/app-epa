@@ -1,12 +1,16 @@
 "use client";
-import Image from 'next/image';
 import React, { useState } from 'react';
-import LogoWhite from "../../../../public/images/logo_login.svg";
+
 export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+    // Adicione aqui a lógica para enviar os dados do formulário
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -22,7 +26,7 @@ export default function Register() {
         <div className="flex flex-col justify-center p-8 bg-white w-1/2 space-y-6">
           <h2 className="text-3xl font-bold text-blue-950 text-center">Registro</h2>
           <p className="text-sm text-center text-gray-600">Preencha os campos abaixo para criar sua conta</p>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
