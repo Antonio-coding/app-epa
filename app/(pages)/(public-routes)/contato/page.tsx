@@ -1,6 +1,8 @@
 "use client";
+import { useState } from 'react';
 import Image from 'next/image'; // Importar Image do Next.js
 import React, { FormEvent } from 'react';
+import LogoWhite from "../../../../public/images/logo_login.svg";
 
 export default function Contato() {
   const [nome, setNome] = useState<string>('');
