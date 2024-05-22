@@ -1,19 +1,19 @@
 "use client";
-import { useState } from 'react';
 import Image from 'next/image'; // Importar Image do Next.js
-
-// Importar a imagem usando require() para garantir que o webpack a inclua na build
-const LogoWhite = require('../../../../public/images/logo_login.svg');
-
-import React, { useState, FormEvent } from 'react';
-import LogoWhite from "../../../../public/images/logo_login.svg";
+import React, { FormEvent } from 'react';
 
 export default function Contato() {
   const [nome, setNome] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [mensagem, setMensagem] = useState<string>('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { // Remover any e definir o tipo do evento
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Adicione a lógica para lidar com o envio do formulário aqui
+    console.log("Nome:", nome);
+    console.log("Email:", email);
+    console.log("Mensagem:", mensagem);
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -70,5 +70,4 @@ export default function Contato() {
       </div>
     </div>
   );
-}
 }
