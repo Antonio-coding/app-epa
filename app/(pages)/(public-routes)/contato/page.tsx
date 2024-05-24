@@ -23,13 +23,15 @@ export default function Contato() {
         
         {/* Greeting Section */}
         <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2 space-y-4">
-          <h2 className="text-3xl font-bold text-center">Entre em Contato</h2>
+          <h2 className="text-3xl font-bold text-center">Seja Bem-vindo!</h2>
           {/* Imagem do logo - usando a tag <Image> do Next.js */}
-          <Image src={LogoWhite} alt="Logo" width={48} height={48} />
+          <Image src={LogoWhite} alt="Logo" width={190} height={190} />
         </div>
         
-        {/* Contato Section */}
+        {/* Contato  Section */}
         <div className="flex flex-col justify-center p-8 bg-white w-1/2 space-y-6">
+          <h2 className="text-3xl font-bold text-blue-950 text-center">Entre em Contato</h2>
+          <p className="text-sm text-center text-gray-600">Para nos comunicar, preencha os campos abaixo. Estamos aqui para ajudar! </p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"

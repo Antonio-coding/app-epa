@@ -26,7 +26,7 @@ export default function Registro() {
         <div className="bg-primary-blue text-white p-8 flex flex-col justify-center items-center w-1/2 space-y-4">
           <h2 className="text-3xl font-bold text-center">Bem-vindo!</h2>
           {/* Imagem do logo - usando a tag <Image> do Next.js */}
-          <Image src={LogoWhite} alt="Logo" width={48} height={48} />
+          <Image src={LogoWhite} alt="Logo" width={190} height={190} />
         </div>
         
         {/* Registro Section */}
