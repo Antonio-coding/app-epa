@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
+
 
 import { RiNotification2Line, RiUserLine } from 'react-icons/ri';
 import ImgPath from '@/constants/imgPath';
@@ -14,7 +17,11 @@ export default function UserNavbar(className: any) {
             </div>
             <div className="flex items-center space-x-4">
                 <RiNotification2Line className="text-white cursor-pointer" size={24} />
-                <RiUserLine className="text-white cursor-pointer" size={24} />
+                <Avatar>
+                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+                {/* <RiUserLine className="text-white cursor-pointer" size={24} /> */}
             </div>
         </div>
     )
