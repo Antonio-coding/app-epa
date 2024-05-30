@@ -17,7 +17,7 @@ export default function PrivateLayout({
       <div className="h-screen flex flex-col">
         <UserNavbar className="sticky  w-full " />
 
-        <main className="flex-grow overflow-y-auto">
+        <main className="flex-grow  overflow-y-auto">
           {children}
         </main>
 

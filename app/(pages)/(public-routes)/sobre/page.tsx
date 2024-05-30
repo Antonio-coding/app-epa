@@ -29,12 +29,12 @@ const authors: Author[] = [
   },
   {
     name: "Jerfferson Marques",
-    img: "/images/imgJeff.png",
+    img: ImgPath.ImgJeff,
     linkedin: "https://www.linkedin.com/in/jefferson-marques-a97bb577/",
   },
   {
-    name: "Jorge Oliveira",
-    img: "/images/imgJorge.png",
+    name: "Jorge Klisyman",
+    img: ImgPath.ImgJorge,
     linkedin:
       "https://www.linkedin.com/in/jorge-klisyman-gomes-de-oliveira-950a55276/",
   },

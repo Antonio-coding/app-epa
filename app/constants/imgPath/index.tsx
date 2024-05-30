@@ -14,12 +14,13 @@ const ImgPath = {
     Img7: "/images/biologia.png",
     Img8: "/images/espanhol.png",
     Img9: "/images/geografia.png",
-    ImgCoracao: "/images/iconeCoracao.png",
-    ImgJeff: "/images/imgJeff.png",
-    ImgBreno: "/images/imgBreno.jpg",
-    ImgJorge: "/images/imgJorge.png",
-    ImgThiago: "/images/imgThiago.png",
-    ImgCaio: "/images/imgCaio.png",
+    ImgCoracao: "/images/equip/iconeCoracao.png",
+    ImgJeff: "/images/equip/imgJeff.png",
+    ImgBreno: "/images/equip/imgBreno.jpg",
+    ImgJorge: "/images/equip/imgJorge.png",
+    ImgThiago: "/images/equip/imgThiago.png",
+    ImgCaio: "/images/equip/imgCaio.png",
+    ImgMirla: "/images/equip/imgMirla.png",
 
 }
 

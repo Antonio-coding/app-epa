@@ -1,13 +1,24 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuShortcut,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 import { RiNotification2Line, RiUserLine } from 'react-icons/ri';
 import ImgPath from '@/constants/imgPath';
+import { useRouter } from 'next/navigation';
+
 
 export default function UserNavbar(className: any) {
+    const router = useRouter();
     return (
         <div className="bg-primary-blue h-5 p-8 flex items-center justify-between">
             <div className="ml-1">
@@ -17,12 +28,29 @@ export default function UserNavbar(className: any) {
             </div>
             <div className="flex items-center space-x-4">
                 <RiNotification2Line className="text-white cursor-pointer" size={24} />
-                <Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                {/* <RiUserLine className="text-white cursor-pointer" size={24} /> */}
+                <DropdownMenu>
+                    <DropdownMenuTrigger>
+                        <Avatar>
+                            <AvatarImage src={ImgPath.ImgMirla} />
+                            <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>Perfil</DropdownMenuItem>
+                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                        <DropdownMenuItem>Team</DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem onClick={() => router.push('/')}>
+                            Sair
+                            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
             </div>
+
         </div>
     )
 }
