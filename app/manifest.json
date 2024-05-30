@@ -1,0 +1,6 @@
+{
+  "name": "EPA! Application",
+  "short_name": "EPA! App",
+  "description": "An application built with Next.js",
+  "start_url": "/"
+}

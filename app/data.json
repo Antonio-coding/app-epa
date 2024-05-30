@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ff854550-8d12-41c0-b54b-404cc2ad796a",
+    "nome": "John Doe",
+    "email": "johndoe@example.com",
+    "senha": "Flag;@5c7e369d,",
+    "registrationDate": "2024-05-22T01:54:29Z"
+  },
+  {
+    "id": "14db0af3-1114-4eea-a889-e1b3b0663626",
+    "nome": "John dsfsdf",
+    "email": "johnssdoe@example.com",
+    "senha": "Flag;@5c7e369d,",
+    "registrationDate": "2024-05-22T02:18:34Z"
+  }
+]
