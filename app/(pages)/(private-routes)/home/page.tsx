@@ -5,18 +5,19 @@ import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, Pagi
 const HomePrivate: React.FC = () => {
   return (
     <>
-      <div className="flex-grow  overflow-y-auto flex flex-col   border">
+      <div className=" flex flex-col   border">
         <div >Search pesquisa e filtro  </div>
-        <div className=' grid grid-cols-3 gap-4 '>
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
-          <CardWithForm />
+        <div className-='gap-4 w-screen flex flex-col items-center justify-center'>
+          <div className='px-4  flex  gap-4 '>
+            <CardWithForm />
+            <CardWithForm />
+            <CardWithForm />
+          </div>
+          {/* <div className='px-4  flex  gap-4 '>
+            <CardWithForm />
+            <CardWithForm />
+            <CardWithForm />
+          </div> */}
         </div>
 
         <Pagination>
@@ -36,26 +37,6 @@ const HomePrivate: React.FC = () => {
           </PaginationContent>
         </Pagination>
 
-        {/* Sidebar */}
-        {/* <div className="bg-gray-800 w-60 flex flex-col">
-        <ul className="flex-1 overflow-y-auto">
-          <li className="mt-4 px-8 py-2 text-white hover:bg-gray-700">Início</li>
-          <li className="px-8 py-2 text-white hover:bg-gray-700">Agenda</li>
-          <li className="px-8 py-2 text-white hover:bg-gray-700">Minhas inscrições</li>
-          <li className="px-8 py-2 text-white hover:bg-gray-700">Pendentes</li>
-          <li className="px-8 py-2 text-white hover:bg-gray-700">Turmas</li>
-          <li className="px-8 py-2 text-white hover:bg-gray-700">Configurações</li>
-        </ul>
-      </div> */}
-        {/* Main */}
-        {/* <div className="flex-1 p-8">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-4 shadow-md rounded-lg">Aulas</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Sala de aula</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Cursos</div>
-          <div className="bg-white p-4 shadow-md rounded-lg">Tira-dúvidas</div>
-        </div>
-      </div> */}
       </div>
     </>
   );
