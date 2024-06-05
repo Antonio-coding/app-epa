@@ -1,3 +1,5 @@
+// app/components/CardClass/index.tsx
+
 import ImgPath from "@/constants/imgPath";
 import Image from "next/image";
 import {
@@ -7,38 +9,54 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
-export function CardWithForm() {
+export interface CardWithFormProps {
+    id: string;
+    nomeTurma: string;
+    foto: string | null;
+    nomeDisciplina: string;
+    nivel: string;
+    hora: string;
+    data: string;
+    localizacao: {
+        endereco: string;
+        cidade: string;
+        estado: string;
+        cep: string;
+    };
+}
+
+export const CardWithForm: React.FC<CardWithFormProps> = ({ nomeTurma, foto, nomeDisciplina, nivel, hora, data, localizacao }) => {
     return (
         <Card className="w-[300px]">
             <CardHeader>
-                <CardTitle>Reforço de matematica</CardTitle>
-                <Image className='bg-scroll' alt='Imagem' width={400} height={200} src={ImgPath.Img1} />
-                <CardDescription>Deploy your new project in one-click.</CardDescription>
+                <CardTitle>{nomeTurma}</CardTitle>
+                <Image className='bg-scroll' alt='Imagem' width={400} height={200} src={foto || ImgPath.Img1} />
+                <CardDescription>{nomeDisciplina}</CardDescription>
             </CardHeader>
             <CardContent>
-                <form>
-                    <div className="grid w-full items-center gap-4">
-                        <div className="flex flex-col space-y-1.5">
-                            Disciplina
-                        </div>
-                        <div className="flex flex-col space-y-1.5">
-                            Nível da turma
-                        </div>
-                        <div className="flex flex-col space-y-1.5">
-                            Hora
-                        </div>
-                        <div className="flex flex-col space-y-1.5">
-                            Dia da semana
-                        </div>
-
+                <div className="grid w-full items-center gap-4">
+                    <div className="flex flex-col space-y-1.5">
+                        <span>Disciplina:</span> <span>{nomeDisciplina}</span>
                     </div>
-                </form>
+                    <div className="flex flex-col space-y-1.5">
+                        <span>Nível da turma:</span> <span>{nivel}</span>
+                    </div>
+                    <div className="flex flex-col space-y-1.5">
+                        <span>Hora:</span> <span>{hora}</span>
+                    </div>
+                    <div className="flex flex-col space-y-1.5">
+                        <span>Data:</span> <span>{data}</span>
+                    </div>
+                    <div className="flex flex-col space-y-1.5">
+                        <span>Localização:</span> <span>{`${localizacao.endereco}, ${localizacao.cidade}, ${localizacao.estado} - ${localizacao.cep}`}</span>
+                    </div>
+                </div>
             </CardContent>
             <CardFooter className="flex justify-between">
-
+                <button className="btn-primary">Criar Turma</button>
             </CardFooter>
         </Card>
-    )
-}
+    );
+};
