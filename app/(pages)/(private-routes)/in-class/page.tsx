@@ -1,23 +1,47 @@
+"use client";
 
-export default function InClass() {
-    return (
-        <>
-            <div>this is the class there you are subscribe </div>
-            <button type="button" className=" bg-primary-blue ">Click me</button>
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { format } from 'date-fns';
 
-            <ul>
-                {/* map through array and create list items */}
-                {/* useEffect to run code when component mounts or updates */}
-                {/*               
-                if we want to run a piece of code only once, we can pass an empty dependency array as the second argument in useEffect.
-                - useState hook returns an array with two values: a piece of state, and a function to update it.
-                useState: hook that allows us to manage state in our functional components. It returns an array with two values, the current state value and
-                - useState hook returns a pair: a piece of state, and a function that lets you update it.
-                    - every time we call this function, React will re-render the component with the      new value
-                  The "useState" hook is used to declare a new state variable in the functional component.
-                  It also automatically subscribes your component to any re-renders when the state changes.
-              */}
-            </ul>
-        </>
-    )
+type Turma = {
+  nome: string;
+  foto: string;
+  disciplina: string;
+  nivel: string;
+  hora: string;
+  data: string;
+};
+
+export default function ListClasses() {
+  const [turmas, setTurmas] = useState<Turma[]>([]);
+
+  useEffect(() => {
+    const storedTurmas = localStorage.getItem('turmas');
+    if (storedTurmas) {
+      setTurmas(JSON.parse(storedTurmas));
+    }
+  }, []);
+
+  return (
+    <div className="p-10 bg-gray-100 min-h-screen">
+      <h1 className="text-3xl font-bold text-center mb-8">Turmas Criadas</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {turmas.map((turma, index) => (
+          <div key={index} className="bg-white p-4 shadow-md rounded-lg">
+            <h3 className="text-xl font-bold mb-2">{turma.nome}</h3>
+            {turma.foto && (
+              <div className="mb-2">
+                <Image src={turma.foto} alt="Foto da Classe" width={166} height={166} className="rounded" />
+              </div>
+            )}
+            <p><strong>Disciplina:</strong> {turma.disciplina}</p>
+            <p><strong>Nível:</strong> {turma.nivel}</p>
+            <p><strong>Hora:</strong> {turma.hora}</p>
+            <p><strong>Data:</strong> {format(new Date(turma.data), 'dd/MM/yyyy')}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
