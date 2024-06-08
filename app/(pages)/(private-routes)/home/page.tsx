@@ -4,6 +4,7 @@ import React from 'react';
 import { CardWithForm } from "@/components/CardClass";
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationLink, PaginationNext } from '@/components/ui/pagination';
 import { usePagination, CardData } from '@/lib/usePagination';
+import { FaSearch } from 'react-icons/fa';
 
 const HomePrivate: React.FC = () => {
   const { cards, currentPage, totalPages, handlePageChange } = usePagination();
@@ -16,14 +17,26 @@ const HomePrivate: React.FC = () => {
   return (
     <>
       <div className="flex flex-col border p-4">
-        <div>Search pesquisa e filtro</div>
+            
+      {/* Barra de Pesquisa */}
+      <div className="flex items-center mb-8 justify-center">
+        <input
+          type="text"
+          placeholder="Pesquisar..."
+          className="w-full max-w-xs p-2 border border-gray-300 rounded-l-lg focus:ring-blue-500 focus:border-blue-500"
+        />
+        <button className="p-3 bg-blue-900 text-white rounded-r-lg">
+          <FaSearch />
+        </button>
+      </div>
+      
         <div className="flex-grow overflow-y-auto mt-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {cards.map((card: CardData, index: number) => (
               <CardWithForm key={card.id} {...card} />
             ))}
           </div>
-          <div className="flex justify-center mt-6">
+      
             <Pagination>
               <PaginationContent>
                 <PaginationItem>
@@ -51,7 +64,7 @@ const HomePrivate: React.FC = () => {
                 </PaginationItem>
               </PaginationContent>
             </Pagination>
-          </div>
+          
         </div>
       </div>
     </>
