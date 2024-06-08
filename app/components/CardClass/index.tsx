@@ -44,10 +44,10 @@ export const CardWithForm: React.FC<CardWithFormProps> = ({ nomeTurma, foto, nom
                         <span>Nível da turma:</span> <span>{nivel}</span>
                     </div>
                     <div className="flex flex-col space-y-1.5">
-                        <span>Hora:</span> <span>{hora}</span>
+                        <span>Hora:</span> <span>{new Date(hora).toLocaleString()}</span>
                     </div>
                     <div className="flex flex-col space-y-1.5">
-                        <span>Data:</span> <span>{data}</span>
+                        <span>Data:</span> <span>{new Date(data).toLocaleDateString()}</span>
                     </div>
                     <div className="flex flex-col space-y-1.5">
                         <span>Localização:</span> <span>{`${localizacao.endereco}, ${localizacao.cidade}, ${localizacao.estado} - ${localizacao.cep}`}</span>

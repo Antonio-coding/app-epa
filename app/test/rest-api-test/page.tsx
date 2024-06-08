@@ -1,38 +1,48 @@
-import { fetchWrapper } from "@/functions/fetch";
+// app/test/rest-api-test/page.tsx
 
-type UserProps = {
-    id: string;
-    nome: string;
-    email: string;
-    senha: string;
-    registrationDate: string;
-};
+'use client';
 
-export default async function RestApiTest() {
-    const response = await fetchWrapper<{ content: UserProps[] }>('users', {
-        method: 'GET',
-    });
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { CardWithForm, CardWithFormProps } from '@/components/CardClass';
 
-    const data = response?.content ?? [];
+const RestApiTest = () => {
+    const [turmas, setTurmas] = useState<CardWithFormProps[]>([]);
 
-    console.log(data);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await axios.get('http://localhost:8080/Turma');
+                const data = res.data.content;
+                setTurmas(data);
+            } catch (error) {
+                console.error('Erro ao buscar dados da API:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
-        <>
-            <h1 className="text-2xl font-bold mb-4">API Test</h1>
-            <div className="space-y-4">
-                {Array.isArray(data) && data.length > 0 ? (
-                    data.map((post) => (
-                        <div key={post.id} className="border p-4 rounded-lg shadow-md">
-                            <p className="text-lg font-semibold">{post.nome}</p>
-                            <p className="text-gray-600">{post.email}</p>
-                            <p className="text-sm text-gray-500">{new Date(post.registrationDate).toLocaleDateString()}</p>
-                        </div>
-                    ))
-                ) : (
-                    <p className="text-red-500">No data available</p>
-                )}
+        <div>
+            <h1 className="text-3xl font-bold">Lista de Turmas</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                {turmas.map((turma) => (
+                    <CardWithForm
+                        key={turma.id}
+                        id={turma.id}
+                        nomeTurma={turma.nomeTurma}
+                        foto={turma.foto}
+                        nomeDisciplina={turma.nomeDisciplina}
+                        nivel={turma.nivel}
+                        hora={turma.hora}
+                        data={turma.data}
+                        localizacao={turma.localizacao}
+                    />
+                ))}
             </div>
-        </>
+        </div>
     );
-}
+};
+
+export default RestApiTest;

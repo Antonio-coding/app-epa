@@ -1,12 +1,17 @@
 // app/(pages)/(private-routes)/home/page.tsx
-
+'use client'
 import React from 'react';
 import { CardWithForm } from "@/components/CardClass";
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationLink, PaginationNext } from '@/components/ui/pagination';
-import { usePagination, CardData } from '@/lib/usePagination'; // Importe o tipo CardData de usePagination
+import { usePagination, CardData } from '@/lib/usePagination';
 
 const HomePrivate: React.FC = () => {
   const { cards, currentPage, totalPages, handlePageChange } = usePagination();
+
+  console.log('HomePrivate render');
+  console.log('Current Page:', currentPage);
+  console.log('Total Pages:', totalPages);
+  console.log('Cards:', cards);
 
   return (
     <>
@@ -15,14 +20,17 @@ const HomePrivate: React.FC = () => {
         <div className="flex-grow overflow-y-auto mt-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {cards.map((card: CardData, index: number) => (
-              <CardWithForm key={index} {...card} />
+              <CardWithForm key={card.id} {...card} />
             ))}
           </div>
           <div className="flex justify-center mt-6">
             <Pagination>
               <PaginationContent>
                 <PaginationItem>
-                  <PaginationPrevious onClick={() => handlePageChange(currentPage - 1)} isActive={currentPage === 1} />
+                  <PaginationPrevious
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    isActive={currentPage === 1}
+                  />
                 </PaginationItem>
                 {[...Array(totalPages)].map((_, index) => (
                   <PaginationItem key={index}>
@@ -36,7 +44,10 @@ const HomePrivate: React.FC = () => {
                   </PaginationItem>
                 ))}
                 <PaginationItem>
-                  <PaginationNext onClick={() => handlePageChange(currentPage + 1)} isActive={currentPage === totalPages} />
+                  <PaginationNext
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    isActive={currentPage === totalPages}
+                  />
                 </PaginationItem>
               </PaginationContent>
             </Pagination>
